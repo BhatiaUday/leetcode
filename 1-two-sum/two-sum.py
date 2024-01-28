@@ -1,8 +1,11 @@
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        x=len(nums)
-        for i in range(x-1):
-            for j in range(i+1,x):
-                if nums[i]+nums[j]==target:
-                    return [i,j]
-        
+    def twoSum(self, nums: List[int], target: int):
+        checked={}
+        x=0
+        while x <len(nums):
+            n=nums[x]
+            f=target-n
+            if f in checked:
+                return(x,checked[f])
+            checked[n]=x
+            x+=1
