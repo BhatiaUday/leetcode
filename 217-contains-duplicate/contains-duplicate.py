@@ -6,4 +6,5 @@ class Solution:
                 return True
             else:
                 hashmap.add(i)
+        return False
         
