@@ -2,8 +2,9 @@ class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         hashmap={}
         for i in nums:
-            if hashmap.get(i) is not None:
+            try:
+                a= hashmap[i]
                 return True
-            else:
+            except:
                 hashmap[i]=1
         
