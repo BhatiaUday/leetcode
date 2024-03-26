@@ -9,7 +9,7 @@ class Solution:
         
         carry=0 
         result=ListNode(0)
-        cur=result
+        c=result
         while l1 or l2:
 
             # Find the sum of two nodes and carray
@@ -29,8 +29,8 @@ class Solution:
 
             # Create a new node and add it to the result 
             newNode=ListNode(val%10)
-            cur.next=newNode
-            cur=cur.next
+            c.next=newNode
+            c=c.next
 
             if l1 :
                 l1=l1.next
@@ -40,5 +40,5 @@ class Solution:
         # if there is an carry creae a new node
         if carry:
             newNode= ListNode(carry)
-            cur.next=newNode
+            c.next=newNode
         return result.next
