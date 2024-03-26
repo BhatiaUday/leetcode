@@ -1,7 +1,6 @@
 class Solution:
     def totalMoney(self, n: int) -> int:
         x=0
-        y=1
         bal=0
         for i in range(n):
             if i%7==0:
