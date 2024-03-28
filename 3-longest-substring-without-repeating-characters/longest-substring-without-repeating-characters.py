@@ -5,7 +5,7 @@ class Solution:
         a=0
         n=len(s)
         for i in range(n):
-            seen[s[i]]= seen.get(s[i],0)+1
+            seen[s[i]] = seen.get(s[i],0)+1
             if seen[s[i]]>1:
                 while s[l]!=s[i]:
                     seen[s[l]]-=1
