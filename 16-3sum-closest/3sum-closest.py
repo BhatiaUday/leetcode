@@ -14,7 +14,6 @@ class Solution:
             k=len(nums)-1
             while j<k:
                 su = nums[i] +nums[j] +nums[k]
-                # print(o,su)
                 o=closest(o,su,t)
                 if su==t:
                     return target
