@@ -1,0 +1,14 @@
+class Solution:
+    def trap(self, height: List[int]) -> int:
+        n = len(height)
+        left,right=[0]*n,[0]*n
+        for i in range(1,n):
+            left[i]=max(height[i-1],left[i-1])
+        for i in range(n-2,-1,-1):
+            right[i]=max(height[i+1],right[i+1])
+        a=0
+        for i in range(n):
+            w=min(left[i],right[i])
+            if w>height[i]:
+                a+=w-height[i]
+        return a
