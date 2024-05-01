@@ -6,7 +6,7 @@ class Solution:
             # print(i)
             if f==0:
                 l.append(i)
-                print(l)
+                # print(l)
                 if i==ch:
                     f=1
                     l=l[::-1]
