@@ -1,11 +1,10 @@
 class Solution:
-    def twoSum(self, nums: List[int], target: int):
-        checked={}
-        x=0
-        while x <len(nums):
-            n=nums[x]
-            f=target-n
-            if f in checked:
-                return(x,checked[f])
-            checked[n]=x
-            x+=1
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        c={}
+        for i in range(len(nums)):
+            n=nums[i]
+            q=target-n
+            if q in c:
+                return[i,c[q]]
+            c[n]=i
+        
