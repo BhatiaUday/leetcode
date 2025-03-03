@@ -10,8 +10,8 @@ class Solution:
                 right.append(i)
             else:
                 pc+=1
-        for i in range(pc):
-            left.append(pivot)
-        left.extend(right)
-        return left
-        
+        res=[]
+        res+=left
+        res+=[pivot]*pc
+        res+=right
+        return res
